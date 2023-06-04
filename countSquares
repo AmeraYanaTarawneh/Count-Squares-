@@ -1,0 +1,20 @@
+%Read the image
+a = imread('squares.jpg');
+
+imshow(image)
+%Convert the image to binary format
+binaryImage = imbinarize(image);
+
+%To inverse colors
+inverseColors=imcomplement(binaryImage);
+
+%Use bwconncomp to find connected components
+cc = bwconncomp(inverseColors);
+
+%now count the number of connected components
+numComponents = cc.NumObjects;
+
+%Display the number of connected components
+disp(['Number of squares is: ' num2str(numComponents)]);
+
+
