@@ -1,5 +1,5 @@
 %Read the image
-a = imread('squares.jpg');
+image = imread('squares.jpg');
 
 imshow(image)
 %Convert the image to binary format
